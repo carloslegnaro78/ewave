@@ -18,6 +18,7 @@ class CreatePastelsTable extends Migration
             $table->string('nome', 100)->comment('Nome do Pastel campo obrigatório');
             $table->decimal('preco', 18,2)->comment('Preço do Pastel campo obrigatório');
             $table->string('foto')->nullable()->comment('Foto do Pastel');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
