@@ -17,6 +17,8 @@ http://localhost:8000/api/clientes
 
 http://localhost:8000/api/pastels
 
+http://localhost:8000/api/pedidos
+
 ## Comandos 
 
 * php artisan migrate:refresh

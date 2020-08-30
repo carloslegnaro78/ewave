@@ -13,7 +13,6 @@ class PastelController extends Controller
 
     public function __construct(Pastel $pastel)
     {
-
         $this->pastel = $pastel;
     }
 
