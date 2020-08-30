@@ -85,12 +85,12 @@ class ClienteController extends Controller
 
     public function permanentDeleteSoftDeleted($id)
     {
-        $note = Cliente::onlyTrashed()->find($id);
+        $cliente = Cliente::onlyTrashed()->find($id);
 
-        if (!is_null($note)) {
+        if (!is_null($cliente)) {
 
-            $note->forceDelete();
-            $response = $this->successfulMessage(200, 'Successfully deleted', true, 0, $note);
+            $cliente->forceDelete();
+            $response = $this->successfulMessage(200, 'Successfully deleted', true, 0, $cliente);
         }
         return response($response);
     }
