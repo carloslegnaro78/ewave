@@ -9,6 +9,14 @@ use App\Models\Pastel;
 class PastelController extends Controller
 {
 
+    private $pastel;
+
+    public function __construct(Pastel $pastel)
+    {
+
+        $this->pastel = $pastel;
+    }
+
     public function index(Pastel $pastel)
     {
         $pastel = $pastel->get();
@@ -35,5 +43,5 @@ class PastelController extends Controller
     {
         //
     }
-    
+
 }
